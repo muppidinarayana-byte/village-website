@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Village</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f1df;
+    color:#263d28;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(20,70,35,.95);
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd76a;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,45,15,.35),rgba(0,45,15,.55)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2200&q=90")
+    center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:100px 20px 50px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin:15px 0;
+    text-shadow:2px 3px 5px #000;
+}
+
+.hero h2{
+    font-size:25px;
+    color:#ffe08a;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 25px;
+    background:#e5a928;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#1e6536;
+}
+
+/* ABOUT */
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#1e6536;
+    margin-bottom:10px;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+}
+
+/* NEWS */
+.news{
+    background:#1e6536;
+    color:white;
+    text-align:center;
+}
+
+.news-box{
+    max-width:900px;
+    margin:auto;
+}
+
+.news-item{
+    background:white;
+    color:#333;
+    margin:15px 0;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+}
+
+/* CONTACT */
+.contact-area{
+    max-width:700px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    height:150px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#123d20;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌿 Our Village</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <h2>WELCOME TO OUR VILLAGE</h2>
+
+        <h1>Where Nature Meets Tradition</h1>
+
+        <p>
+            Welcome to our beautiful village — a place of green fields,
+            peaceful homes, hardworking farmers, happy children,
+            and strong community values.
+        </p>
+
+        <a href="#about" class="btn">Explore Our Village</a>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="section-title">
+        <h2>🌾 About Our Village</h2>
+    </div>
+
+    <div class="about">
+
+        <p>
+            Our village is surrounded by beautiful farms, trees,
+            ponds and peaceful countryside. Our farmers work hard
+            to grow crops and support our community.
+        </p>
+
+        <br>
+
+        <p>
+            Children study in our schools, families celebrate
+            festivals together, and villagers help each other
+            during important times.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+
+    <div class="section-title">
+        <h2>🏡 Village Facilities</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🏥</div>
+            <h3>Health Center</h3>
+            <p>Basic healthcare and emergency support for villagers.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏫</div>
+            <h3>Education</h3>
+            <p>Schools helping our children build a better future.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌾</div>
+            <h3>Agriculture</h3>
+            <p>Farming is an important part of our village life.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💧</div>
+            <h3>Water</h3>
+            <p>Water facilities supporting homes and agriculture.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚌</div>
+            <h3>Transport</h3>
+            <p>Road and transport facilities connecting our village.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Culture</h3>
+            <p>Festivals and traditions bring our community together.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+    <div class="section-title">
+        <h2>📸 Village Gallery</h2>
+    </div>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+             alt="Green Fields">
+
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"
+             alt="Village Nature">
+
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80"
+             alt="Farmer">
+
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+             alt="School Children">
+
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+             alt="Countryside">
+
+        <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=900&q=80"
+             alt="Nature">
+
+    </div>
+
+</section>
+
+<!-- NEWS -->
+<section class="news" id="news">
+
+    <div class="section-title">
+        <h2 style="color:white;">📢 Village News & Announcements</h2>
+    </div>
+
+    <div class="news-box">
+
+        <div class="news-item">
+            <strong>📢 Village Meeting</strong>
+            <p>
+                All villagers are requested to attend the upcoming
+                village meeting.
+            </p>
+        </div>
+
+        <div class="news-item">
+            <strong>🌾 Agriculture Notice</strong>
+            <p>
+                Farmers can contact the agriculture office for
+                information about farming support.
+            </p>
+        </div>
+
+        <div class="news-item">
+            <strong>🏫 School Announcement</strong>
+            <p>
+                Parents and students are requested to follow
+                the latest school announcements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="section-title">
+        <h2>📞 Contact Our Village</h2>
+    </div>
+
+    <div class="contact-area">
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button class="btn" type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © <span id="year"></span> Our Village
+    </p>
+
+    <p>
+        Built with ❤️ for our village
+    </p>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        alert(
+            "Thank you, " + name +
+            "! Your message has been received."
+        );
+
+        this.reset();
+    }
+);
+</script>
+
+</body>
+</html>
